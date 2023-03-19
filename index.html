@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson_js</title>
+</head>
+<style>
+    pre{
+       color: blue; 
+    }
+    h2{
+        color: red;
+    }
+</style>
+<body>
+    <h2>Count Characters</h2>
+    <p>Answer:-You are given a string 
+S
+, and your task is to return an array 
+B
+ 
+(
+having a size of 
+2
+)
+, where 
+B
+[
+0
+]
+ contains the count of character A (uppercase) in string S and 
+B
+[
+1
+]
+ contains the count of character D (uppercase) in string S.</p>
+     <pre>
+        const countCharacters = (S) => 
+{
+ let A_count=0;
+ let D_count=0;
+ for(i=0;i<=S.length;i++)
+ {
+   if(S[i]==='A')
+   {
+     A_count++ 
+   }
+   else if(S[i]==='D')
+   {
+     D_count++
+   }
+ }
+ return [A_count,D_count]
+};
+     </pre>
+     <h2>Count the Heads</h2>
+      <p>Answer:-Tina is given a string  S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string  S , she decided to write a code that finds out the count of characters that occur more than once in the string.</p>
+     <pre>
+        var Count_Occ = (s) => 
+            {
+              let count = {};
+                for (let i = 0; i < s.length; i++) {
+                    let char = s.charAt(i);
+                    if (count[char]) {
+                        count[char]++;
+                    } else {
+                        count[char] = 1;
+                    }
+                }
+                let result = "";
+                let keys = Object.keys(count).sort();
+                for (let i = 0; i < keys.length; i++) {
+                    if (count[keys[i]] > 1) {
+                        result += keys[i] + count[keys[i]];
+                    }
+                }
+            
+                return result;
+            }; 
+
+     </pre>
+     <h2>Count the Vowels</h2>
+    <p>Answer:-You are given a string 
+S
+ containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.</p>
+     <pre>
+        var Count_Vowels= (S) => 
+{
+    count=0;
+    for(i=0;i<=S.length;i++)
+    {
+      if(S[i]=='a' || S[i]=='e' || S[i]=='i' || S[i]=='o' || S[i]=='u' )
+      {
+        count++;
+      }
+      
+    }
+    return count;
+};
+     </pre>
+     <h2>Concatenate the Strings</h2>
+    <p>Answer:-You are given two strings 
+S
+1
+ and 
+S
+2
+ (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings. </p>
+     <pre>
+        var Concatenate_Strings = (S1, S2) => 
+{
+     return S1.concat(S2); 
+};
+     </pre>
+     <h2>Find Length</h2>
+    <p>Answer:-You are given a string 
+S
+, and your task is to return the length of the string 
+S
+.</p>
+     <pre>
+        const findLength = (S) => 
+{
+   return S.length; 
+};
+     </pre>
+     <h2>Find the Winner</h2>
+    <p>Answer:-</p>
+     <pre>var Game_Winner = (S) => 
+{
+  Danish=0;
+  Aditya=0;
+  for(i=0;i<S.length;i++)
+  {
+    if(S[i]==='D')
+    {
+      Danish++;
+    }
+    else if(S[i]==='A')
+    {
+      Aditya++;
+    }
+  }
+  if(Danish>Aditya)
+  {
+    return "Danish"
+  }
+  else if(Danish<Aditya)
+  {
+    return "Aditya"
+  }
+  else
+  {
+    return "Draw"
+  }
+  
+}</pre>
+     <h2>Join Strings</h2>
+    <p>Answer:-You are given two strings 
+S
+ and 
+P
+, and your task is to concatenate them and return the concatenated string.</p>
+     <pre>
+        const joinStrings = (S, P) => 
+{
+  return S.concat(P)  
+}
+     </pre>
+     <h2>Plaindrome Check</h2>
+    <p>Answer:-You are given a strin , Your task is to check wether the given string is a Palindromeor not.A Palindromeis a string, which turnout same when read in reverse direction.Example: "naman" is a Palindrome.String can contain both upppercase lowercase letters.</p>
+     <pre>
+        var Palin_Check = (str) =>
+{
+	 if(str!=str.split(" ").reverse().join())
+	 {
+	   return "False";
+	 }
+	 else
+	 {
+	   return "True";
+	 }
+}
+     </pre>
+     <h2>Reverse the String</h2>
+    <p>Answer:-You are given a string S, Your task is to Reverse the string.String can contain both upppercase lowercase letters</p>
+     <pre>
+        var Reverse_String = (str) => 
+{
+  let string=""
+  for(i=str.length-1;i>=0;i--)
+  {
+   string+=str[i];
+  }
+  return string;
+};
+     </pre>
+     <h2>Match the Strings</h2>
+    <p>Answer:-You are given two strings S1and S2, Your task is to print YEif both strings are same else print NO.</p>
+     <pre>
+var String_Match = (S1,S2) => 
+{
+  if(S1===S2)
+  {
+    return "YES"
+  }
+  else
+  {
+    return "NO"
+  }
+}
+     </pre>
+     <h2>String Replace</h2>
+    <p>Answer:-You are given a string S, along with a pattern string and a text string. You need to repalce the pattern string in Sto the text string.</p>
+     <pre>
+        var Replace = (S, pattern , text) => 
+{
+      return S.replace(pattern,text);
+};
+     </pre>
+     <h2>Split the String</h2>
+    <p>Answer:-You are given a string S, Your task is to split the string with respect to spaces.</p>
+     <pre>var Split_the_string = (S) => 
+{
+   return S.split(" ");
+};</pre>
+
+     <h2>Count the Vowels and Consonants</h2>
+    <p>Answer:-You are given a string containing both uppercase and lowercase letters. You need to find out the number of vowels and the number of consonants in the given string</p>
+     <pre>
+
+        var Count_Vowels= (S) => 
+{
+  let vowel=0;
+   for(i=0;i<=S.length;i++)
+   {
+     if(S[i]==='a' || S[i]=='e' || S[i]==='i' || S[i]==='o' || S[i]==='u')
+    {
+      vowel++;
+    }
+     
+   }
+   return vowel;
+};
+var Count_Consonants= (S) => 
+{
+   let consonant=0;
+   for(i=0;i<S.length;i++)
+   {
+     if(S[i]!=='a' && S[i]!=='e' && S[i]!=='i' && S[i]!=='o' && S[i]!='u')
+    {
+    consonant++;
+    }
+     
+   } 
+  return  consonant++;
+};
+     </pre>
+</body>
+</html>
